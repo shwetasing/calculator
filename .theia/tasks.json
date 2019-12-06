@@ -1,0 +1,22 @@
+{
+    "tasks": [
+        {
+            "type": "che",
+            "label": "build",
+            "command": "g++ -g calculator.cpp -o calc.out && echo \"Build complete\"",
+            "target": {
+                "workingDir": "${CHE_PROJECTS_ROOT}/myCalculator",
+                "component": "cpp-dev"
+            }
+        },
+        {
+            "type": "che",
+            "label": "run",
+            "command": "./calc.out",
+            "target": {
+                "workingDir": "${CHE_PROJECTS_ROOT}/myCalculator",
+                "component": "cpp-dev"
+            }
+        }
+    ]
+}
